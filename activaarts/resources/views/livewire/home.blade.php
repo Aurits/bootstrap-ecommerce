@@ -39,7 +39,8 @@
 
         <section class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-4 fade-in">Why Choose Us<              <div class="row g-4">
+                <h2 class="text-center mb-4 fade-in">Why Choose Us</h2>
+                <div class="row g-4">
                     <div class="col-md-4 fade-in">
                         <div class="text-center">
                             <i class="bi bi-palette display-4 text-accent"></i>
