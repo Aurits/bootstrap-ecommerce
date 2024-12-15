@@ -1,0 +1,247 @@
+/* Dashboard Styles */
+:root {
+  --dashboard-primary: #2c3e50;
+  --dashboard-secondary: #e74c3c;
+  --dashboard-accent: #3498db;
+  --dashboard-bg: #f8f9fa;
+  --dashboard-text: #34495e;
+  --dashboard-success: #2ecc71;
+  --dashboard-warning: #f39c12;
+  --dashboard-danger: #e74c3c;
+}
+
+body {
+  background-color: var(--dashboard-bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background-color: var(--dashboard-primary);
+  color: #fff;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 0 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul {
+  padding: 20px 0;
+}
+
+.sidebar ul li {
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.sidebar ul li.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-header {
+  background-color: #fff;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--dashboard-primary);
+  font-weight: 600;
+}
+
+.user-menu img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border: 2px solid var(--dashboard-accent);
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--dashboard-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn-custom {
+  background-color: var(--dashboard-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background-color: var(--dashboard-secondary);
+  transform: translateY(-2px);
+}
+
+/* Quick Links */
+.quick-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Chart Styles */
+canvas {
+  max-width: 100%;
+}
+
+/* Table Styles */
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: var(--dashboard-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+}
+
+/* Order Timeline */
+.order-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--dashboard-accent);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid var(--dashboard-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon i {
+  font-size: 0.8rem;
+  color: var(--dashboard-accent);
+}
+
+.timeline-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.active .timeline-icon {
+  background-color: var(--dashboard-accent);
+}
+
+.timeline-item.active .timeline-icon i {
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dashboard-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
