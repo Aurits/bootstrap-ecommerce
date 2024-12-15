@@ -41,7 +41,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Acrylic Paint Set</h5>
                             <p class="card-text text-accent fw-bold">$34.99</p>
-                            <a href="product-details.html" class="btn btn-custom w-100">
+                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                 <span>View Details</span>
                             </a>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Paintbrush Set</h5>
                             <p class="card-text text-accent fw-bold">$19.99</p>
-                            <a href="product-details.html" class="btn btn-custom w-100">
+                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                 <span>View Details</span>
                             </a>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Easel</h5>
                             <p class="card-text text-accent fw-bold">$79.99</p>
-                            <a href="product-details.html" class="btn btn-custom w-100">
+                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                 <span>View Details</span>
                             </a>
                         </div>

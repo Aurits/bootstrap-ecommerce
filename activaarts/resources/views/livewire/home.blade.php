@@ -6,7 +6,7 @@
                 <p class="lead mb-5 fade-in">
                     Discover unique artworks and craft supplies that inspire creativity
                 </p>
-                <a href="products.html" class="btn btn-custom btn-lg fade-in">
+                <a href="{{ route('products') }}" class="btn btn-custom btn-lg fade-in">
                     <span>Explore Our Collection</span>
                 </a>
             </div>
@@ -26,7 +26,7 @@
                                     Premium quality canvas for your masterpieces
                                 </p>
                                 <p class="card-text text-accent fw-bold">$59.99</p>
-                                <a href="product-details.html" class="btn btn-custom w-100">
+                                <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                     <span>View Details</span>
                                 </a>
                             </div>

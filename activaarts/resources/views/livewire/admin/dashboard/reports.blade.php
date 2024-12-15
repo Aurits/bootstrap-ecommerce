@@ -12,8 +12,8 @@
                             <span>Admin User</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="settings.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('admin.dashboard.settings') }}">Settings</a>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

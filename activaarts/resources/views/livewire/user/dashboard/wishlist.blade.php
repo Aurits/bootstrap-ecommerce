@@ -12,8 +12,8 @@
                             <span>John Doe</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="account-settings.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="account-settings.html">Settings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('user.dashboard.settings') }}">Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

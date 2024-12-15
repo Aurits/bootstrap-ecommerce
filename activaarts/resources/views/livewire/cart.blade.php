@@ -63,7 +63,7 @@
                             <strong>Total</strong>
                             <strong class="text-accent">$109.48</strong>
                         </div>
-                        <a href="checkout.html" class="btn btn-custom w-100">
+                        <a href="{{ route('checkout') }}" class="btn btn-custom w-100">
                             <span>Proceed to Checkout</span>
                         </a>
                     </div>

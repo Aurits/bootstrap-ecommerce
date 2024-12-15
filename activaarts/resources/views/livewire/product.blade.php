@@ -48,7 +48,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Artistic Canvas</h5>
                                 <p class="card-text text-accent fw-bold">$59.99</p>
-                                <a href="product-details.html" class="btn btn-custom w-100">
+                                <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                     <span>View Details</span>
                                 </a>
                             </div>
@@ -61,7 +61,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Vibrant Acrylics Set</h5>
                                 <p class="card-text text-accent fw-bold">$34.99</p>
-                                <a href="product-details.html" class="btn btn-custom w-100">
+                                <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                     <span>View Details</span>
                                 </a>
                             </div>
@@ -73,7 +73,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Sculpting Clay</h5>
                                 <p class="card-text text-accent fw-bold">$24.99</p>
-                                <a href="product-details.html" class="btn btn-custom w-100">
+                                <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
                                     <span>View Details</span>
                                 </a>
                             </div>

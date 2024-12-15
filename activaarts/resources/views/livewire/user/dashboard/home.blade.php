@@ -12,8 +12,8 @@
                             <span>John Doe</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="account-settings.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="account-settings.html">Settings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('user.dashboard.settings') }}">Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -46,7 +46,7 @@
                                 <span class="badge bg-warning rounded-pill">Processing</span>
                             </li>
                         </ul>
-                        <a href="my-orders.html" class="btn btn-custom mt-3">View All Orders</a>
+                        <a href="{{ route('user.dashboard.orders') }}" class="btn btn-custom mt-3">View All Orders</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Wishlist</h5>
                         <p>You have 5 items in your wishlist.</p>
-                        <a href="wishlist.html" class="btn btn-custom">View Wishlist</a>
+                        <a href="{{ route('user.dashboard.wishlist') }}" class="btn btn-custom">View
+                            Wishlist</a>
                     </div>
                 </div>
             </div>
@@ -64,9 +65,9 @@
             <div class="col-md-12">
                 <h3>Quick Links</h3>
                 <div class="quick-links">
-                    <a href="my-orders.html" class="btn btn-custom">View Latest Order</a>
-                    <a href="account-settings.html" class="btn btn-custom">Edit Account Info</a>
-                    <a href="../products.html" class="btn btn-custom">Browse New Products</a>
+                    <a href="{{ route('user.dashboard.orders') }}" class="btn btn-custom">View Latest Order</a>
+                    <a href="{{ route('user.dashboard.settings') }}" class="btn btn-custom">Edit Account Info</a>
+                    <a href="{{ route('products') }}" class="btn btn-custom">Browse New Products</a>
                 </div>
             </div>
         </div>

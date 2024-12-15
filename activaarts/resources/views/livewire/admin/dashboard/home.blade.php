@@ -12,8 +12,8 @@
                                 <span>Admin User</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="settings.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.dashboard.settings') }}">Settings</a>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -32,7 +32,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Total Orders</h5>
                             <p class="card-text display-4">1,234</p>
-                            <a href="manage-orders.html" class="btn btn-custom btn-sm">View Details</a>
+                            <a href="{{ route('admin.dashboard.orders') }}" class="btn btn-custom btn-sm">View
+                                Details</a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +42,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Revenue</h5>
                             <p class="card-text display-4">$45,678</p>
-                            <a href="reports.html" class="btn btn-custom btn-sm">View Report</a>
+                            <a href="{{ route('admin.dashboard.reports') }}" class="btn btn-custom btn-sm">View
+                                Report</a>
                         </div>
                     </div>
                 </div>
@@ -50,7 +52,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Pending Orders</h5>
                             <p class="card-text display-4">23</p>
-                            <a href="manage-orders.html" class="btn btn-custom btn-sm">Process Orders</a>
+                            <a href="{{ route('admin.dashboard.orders') }}" class="btn btn-custom btn-sm">Process
+                                Orders</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +62,8 @@
                         <div class="card-body">
                             <h5 class="card-title">New Customers</h5>
                             <p class="card-text display-4">56</p>
-                            <a href="customer-management.html" class="btn btn-custom btn-sm">View Customers</a>
+                            <a href="{{ route('admin.dashboard.customers') }}" class="btn btn-custom btn-sm">View
+                                Customers</a>
                         </div>
                     </div>
                 </div>
