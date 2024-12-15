@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="dashboards/styles/custom.css">
     <link rel="stylesheet" href="dashboards/styles/dashboard.css">
+    <link rel="stylesheet" href="{{ asset('admin/dashboards/styles/mobile.css') }}">
     @livewireStyles
 </head>
 
@@ -53,8 +54,11 @@
         </nav>
         <!-- Page Content -->
         {{ $slot }}
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle d-lg-none">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
-
+    <script src="{{ asset('admin/dashboards/mobile.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @livewireScripts
     @stack('scripts')

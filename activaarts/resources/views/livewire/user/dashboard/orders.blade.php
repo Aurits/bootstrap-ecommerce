@@ -72,7 +72,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Need Help?</h3>
-                <p>If you have any questions about your orders, please visit our <a href="support.html">Support Page</a>
+                <p>If you have any questions about your orders, please visit our <a
+                        href="{{ route('user.dashboard.support') }}">Support Page</a>
                     or contact our customer service team.</p>
             </div>
         </div>

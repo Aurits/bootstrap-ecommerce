@@ -31,8 +31,7 @@
                         <span class="brand-text">Activa</span>
                         <span class="brand-accent">Arts</span>
                     </a>
-                    <i class="bi bi-list" data-bs-toggle="collapse" data-bs-target="#navbarNav"></i>
-
+                    <i class="bi bi-list d-block d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"></i>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
