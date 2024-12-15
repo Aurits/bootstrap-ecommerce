@@ -19,6 +19,7 @@
 
     <!-- Scripts -->
     <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+    @livewireStyles
 </head>
 
 <body class="font-sans antialiased">
@@ -178,7 +179,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/main.js"></script>
-
+    @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>
