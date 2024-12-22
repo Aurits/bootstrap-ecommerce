@@ -1,5 +1,5 @@
 <div class="main-content">
-    <header class="dashboard-header">
+    <!-- <header class="dashboard-header">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col">
@@ -123,5 +123,44 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+
+    <div class="container py-5">
+        <!-- Page Header -->
+        <div class="text-center mb-5">
+            <h1>Upcoming Feature</h1>
+            <p class="text-muted">Exciting updates are on the way. Stay tuned!</p>
+        </div>
+
+        <!-- Features List -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h5>Order Tracking</h5>
+                        <p class="text-muted">Release: March 2025</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Real-Time Notifications</h5>
+                        <p class="text-muted">Release: April 2025</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>New Integrations</h5>
+                        <p class="text-muted">Release: June 2025</p>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>AI Assistant</h5>
+                        <p class="text-muted">Release: August 2025</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Call-to-Action -->
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary">Subscribe for Updates</a>
+        </div>
     </div>
+
 </div>

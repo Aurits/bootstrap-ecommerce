@@ -2,76 +2,81 @@
     <main class="container py-5 mt-5">
         <div class="row">
             <div class="col-md-6 fade-in">
-                <img src="https://via.placeholder.com/600x600" alt="Artistic Canvas" class="img-fluid rounded" />
+                <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="img-fluid rounded" />
             </div>
             <div class="col-md-6 fade-in">
-                <h1 class="mb-4">Artistic Canvas</h1>
-                <p class="lead mb-4 text-accent fw-bold">$59.99</p>
-                <p class="mb-4">
-                    High-quality canvas perfect for creating stunning artworks. This
-                    canvas is designed to bring out the best in your paintings,
-                    providing a smooth surface and excellent color absorption.
-                </p>
+                <h1 class="mb-4">{{ $product->name }}</h1>
+                <p class="lead mb-4 text-accent fw-bold">${{ number_format($product->price, 2) }}</p>
+                <p class="mb-4">{{ $product->description }}</p>
                 <form class="mb-4">
                     <div class="mb-3">
                         <label for="quantity" class="form-label">Quantity</label>
                         <input type="number" class="form-control" id="quantity" value="1" min="1" />
                     </div>
-                    <button type="submit" class="btn btn-custom add-to-cart" data-product-id="1"
-                        data-product-name="Artistic Canvas" data-product-price="59.99">
+                    <button type="submit" class="btn btn-custom add-to-cart" data-product-id="{{ $product->id }}"
+                        data-product-name="{{ $product->name }}" data-product-price="{{ $product->price }}">
                         <span>Add to Cart</span>
                     </button>
                 </form>
-                <h4 class="mb-3">Product Details</h4>
-                <ul class="list-unstyled">
-                    <li><strong>Size:</strong> 24" x 36"</li>
-                    <li><strong>Material:</strong> 100% Cotton</li>
-                    <li><strong>Primed:</strong> Yes</li>
-                    <li><strong>Suitable for:</strong> Acrylic, Oil, Mixed Media</li>
-                </ul>
+                <div class="container py-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-4">Product Information</h5>
+                            <div class="row text-center gy-3">
+                                <div class="col-6 col-md-3">
+                                    <div class="bg-light p-3 rounded h-100">
+                                        <strong class="d-block text-muted">SKU</strong>
+                                        <span class="fw-bold text-primary">{{ $product->sku }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <div class="bg-light p-3 rounded h-100">
+                                        <strong class="d-block text-muted">Stock</strong>
+                                        <span class="fw-bold text-success">{{ $product->stock }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="bg-light p-3 rounded h-100">
+                                        <strong class="d-block text-muted">Category</strong>
+                                        <span class="fw-bold text-info">{{ $product->category }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="bg-light p-3 rounded h-100">
+                                        <strong class="d-block text-muted">Featured</strong>
+                                        <span class="fw-bold text-warning">
+                                            {{ $product->is_featured ? 'Yes' : 'No' }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <section class="mt-5">
             <h2 class="text-center mb-4 fade-in">Related Products</h2>
             <div class="row g-4">
+                @foreach($relatedProducts as $related)
                 <div class="col-md-4 fade-in">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Acrylic Paint Set" />
+                        <img src="{{ $related->image_url }}" class="card-img-top" alt="{{ $related->name }}" />
                         <div class="card-body">
-                            <h5 class="card-title">Acrylic Paint Set</h5>
-                            <p class="card-text text-accent fw-bold">$34.99</p>
-                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
+                            <h5 class="card-title">{{ $related->name }}</h5>
+                            <p class="card-text text-accent fw-bold">${{ number_format($related->price, 2) }}</p>
+                            <a href="{{ route('products.details', ['productId' => $related->id]) }}"
+                                class="btn btn-custom w-100">
                                 <span>View Details</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Paintbrush Set" />
-                        <div class="card-body">
-                            <h5 class="card-title">Paintbrush Set</h5>
-                            <p class="card-text text-accent fw-bold">$19.99</p>
-                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
-                                <span>View Details</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 fade-in">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Easel" />
-                        <div class="card-body">
-                            <h5 class="card-title">Easel</h5>
-                            <p class="card-text text-accent fw-bold">$79.99</p>
-                            <a href="{{ route('products-details') }}" class="btn btn-custom w-100">
-                                <span>View Details</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
+
     </main>
 </div>

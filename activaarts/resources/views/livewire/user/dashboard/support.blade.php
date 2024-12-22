@@ -117,8 +117,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Contact Information</h5>
-                        <p><strong>Customer Support:</strong> (123) 456-7890</p>
-                        <p><strong>Email:</strong> support@activaarts.com</p>
+                        <p><strong>Customer Support:</strong>(+256) 773 559 912</p>
+                        <p><strong>Email:</strong>activaartsug@gmail.com</p>
                         <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm EST</p>
                     </div>
                 </div>

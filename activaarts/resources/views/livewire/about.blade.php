@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <section class="mb-5">
+        <!-- <section class="mb-5">
             <h2 class="text-center mb-4">Our Team</h2>
             <div class="minimalist-divider"></div>
             <div class="row">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="contact">
             <h2 class="text-center mb-4">Contact Us</h2>
@@ -90,11 +90,11 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <h4>Our Location</h4>
-                    <p>123 Art Street, Creativity City, AC 12345</p>
+                    <p>Kampala (Uganda)</p>
                     <h4>Email</h4>
-                    <p>info@activaarts.com</p>
+                    <p>activaartsug@gmail.com</p>
                     <h4>Phone</h4>
-                    <p>(123) 456-7890</p>
+                    <p>(+256) 773 559 912</p>
                 </div>
             </div>
         </section>

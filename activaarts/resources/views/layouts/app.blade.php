@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
-    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="{{ asset('styles/custom.css') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -151,9 +151,9 @@
                         </a>
                     </div>
                     <div class="contact-info mt-4">
-                        <p><i class="bi bi-geo-alt"></i> 123 Art Street, Creativity City</p>
-                        <p><i class="bi bi-envelope"></i> info@activaarts.com</p>
-                        <p><i class="bi bi-telephone"></i> (123) 456-7890</p>
+                        <p><i class="bi bi-geo-alt"></i>Kampala (Uganda)</p>
+                        <p><i class="bi bi-envelope"></i>activaartsug@gmail.com</p>
+                        <p><i class="bi bi-telephone"></i>(+256) 773 559 912</p>
                     </div>
                 </div>
             </div>
@@ -179,7 +179,9 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
+
+    <script src="{{ asset('scripts/main.js') }}"></script>
+
     @livewireScripts
     @stack('scripts')
 </body>

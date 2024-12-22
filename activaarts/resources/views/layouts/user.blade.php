@@ -35,11 +35,11 @@
                         <i class="bi bi-heart"></i> Wishlist
                     </a>
                 </li>
-                <li class="{{ request()->routeIs('user.dashboard.settings') ? 'active' : '' }}">
+                <!-- <li class="{{ request()->routeIs('user.dashboard.settings') ? 'active' : '' }}">
                     <a href="{{ route('user.dashboard.settings') }}">
                         <i class="bi bi-gear"></i> Account Settings
                     </a>
-                </li>
+                </li> -->
                 <li class="{{ request()->routeIs('user.dashboard.support') ? 'active' : '' }}">
                     <a href="{{ route('user.dashboard.support') }}">
                         <i class="bi bi-question-circle"></i> Support

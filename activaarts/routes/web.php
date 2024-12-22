@@ -47,7 +47,7 @@ Route::get('/about', About::class)->name("about");
 Route::get('/cart', Cart::class)->name("cart");
 Route::get('/Checkout', Checkout::class)->name("checkout")->middleware(['auth', 'verified']);
 Route::get('/products', Product::class)->name("products");
-Route::get('/product-details', ProductDetails::class)->name("products-details");
+Route::get('/product-details/{productId}', ProductDetails::class)->name('products.details');
 
 
 
