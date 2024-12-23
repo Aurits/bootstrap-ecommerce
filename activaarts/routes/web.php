@@ -45,7 +45,7 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
 Route::get('/', Home::class)->name("home");
 Route::get('/about', About::class)->name("about");
 Route::get('/cart', Cart::class)->name("cart");
-Route::get('/Checkout', Checkout::class)->name("checkout")->middleware(['auth', 'verified']);
+Route::get('/checkout', Checkout::class)->name("checkout")->middleware(['auth', 'verified']);
 Route::get('/products', Product::class)->name("products");
 Route::get('/product-details/{productId}', ProductDetails::class)->name('products.details');
 
