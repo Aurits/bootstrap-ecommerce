@@ -81,8 +81,15 @@
                                     <span>{{ Auth::user()->name }}</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                    @auth
+                                    @if(auth()->user()->roles == 'admin')
+                                    <li><a class="dropdown-item"
+                                            href="{{ route('admin.dashboard.home') }}">Dashboard</a>
                                     </li>
+                                    @else
+                                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+                                    @endif
+                                    @endauth
                                     <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
                                     <li><a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
