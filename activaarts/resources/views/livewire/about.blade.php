@@ -99,18 +99,21 @@
             <div class="minimalist-divider"></div>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <form>
+                    <form wire:submit.prevent="submit">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required />
+                            <input type="text" class="form-control" id="name" wire:model="name" />
+                            @error('name') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required />
+                            <input type="email" class="form-control" id="email" wire:model="email" />
+                            @error('email') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <textarea class="form-control" id="message" rows="5" wire:model="message"></textarea>
+                            @error('message') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <button type="submit" class="btn btn-custom">Send Message</button>
                     </form>
@@ -124,6 +127,16 @@
                     <p>(+256) 773 559 912</p>
                 </div>
             </div>
+
+            <!-- Success Popup -->
+            @if ($showSuccess)
+            <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                Your message has been sent successfully!
+                <button type="button" class="btn-close" wire:click="$set('showSuccess', false)"
+                    aria-label="Close"></button>
+            </div>
+            @endif
         </section>
+
     </main>
 </div>

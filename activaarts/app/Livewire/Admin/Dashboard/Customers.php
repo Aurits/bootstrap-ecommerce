@@ -26,7 +26,7 @@ class Customers extends Component
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
         'status' => 'required|in:active,inactive',
-        'roles' => 'required|in:customer,admin,support',
+        'roles' => 'required|in:user,admin,support',
     ];
 
     public function mount()

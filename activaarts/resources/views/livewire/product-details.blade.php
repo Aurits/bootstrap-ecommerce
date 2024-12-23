@@ -8,13 +8,12 @@
                 <h1 class="mb-4">{{ $product->name }}</h1>
                 <p class="lead mb-4 text-accent fw-bold">${{ number_format($product->price, 2) }}</p>
                 <p class="mb-4">{{ $product->description }}</p>
-                <form class="mb-4">
+                <form wire:submit.prevent="addToCart">
                     <div class="mb-3">
                         <label for="quantity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" id="quantity" value="1" min="1" />
+                        <input type="number" class="form-control" id="quantity" wire:model="quantity" min="1" />
                     </div>
-                    <button type="submit" class="btn btn-custom add-to-cart" data-product-id="{{ $product->id }}"
-                        data-product-name="{{ $product->name }}" data-product-price="{{ $product->price }}">
+                    <button type="submit" class="btn btn-custom">
                         <span>Add to Cart</span>
                     </button>
                 </form>
@@ -53,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -77,6 +75,6 @@
                 @endforeach
             </div>
         </section>
-
     </main>
+
 </div>

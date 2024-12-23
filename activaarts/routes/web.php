@@ -22,7 +22,7 @@ use App\Livewire\Admin\Dashboard\Reports as AdminReports;
 use App\Livewire\Admin\Dashboard\Settings as AdminSettings;
 
 // User Dashboard Routes
-Route::prefix('user')->middleware('auth')->group(function () {
+Route::prefix('user')->middleware(['auth', 'role:user'])->group(function () {
     Route::get('/dashboard', UserHome::class)->name('dashboard');
     Route::get('/orders', UserOrders::class)->name('user.dashboard.orders');
     Route::get('/wishlist', UserWishlist::class)->name('user.dashboard.wishlist');
@@ -32,7 +32,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
 });
 
 // Admin Dashboard Routes
-Route::prefix('admin')->middleware('auth')->group(function () {
+Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', AdminHome::class)->name('admin.dashboard.home');
     Route::get('/orders', AdminOrders::class)->name('admin.dashboard.orders');
     Route::get('/products', AdminProducts::class)->name('admin.dashboard.products');

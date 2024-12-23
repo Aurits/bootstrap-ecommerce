@@ -30,11 +30,11 @@
                         <i class="bi bi-box-seam"></i> My Orders
                     </a>
                 </li>
-                <li class="{{ request()->routeIs('user.dashboard.wishlist') ? 'active' : '' }}">
+                <!-- <li class="{{ request()->routeIs('user.dashboard.wishlist') ? 'active' : '' }}">
                     <a href="{{ route('user.dashboard.wishlist') }}">
                         <i class="bi bi-heart"></i> Wishlist
                     </a>
-                </li>
+                </li> -->
                 <!-- <li class="{{ request()->routeIs('user.dashboard.settings') ? 'active' : '' }}">
                     <a href="{{ route('user.dashboard.settings') }}">
                         <i class="bi bi-gear"></i> Account Settings

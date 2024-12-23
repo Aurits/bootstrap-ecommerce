@@ -52,10 +52,23 @@
                                     <span>About</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item position-relative">
                                 <a class="nav-link hover-effect" href="{{ route('cart') }}">
                                     <i class="bi bi-cart"></i>
                                     <span>Cart</span>
+                                    @php
+                                    $totalQuantity = 0;
+                                    $cartItems = session()->get('cart', []);
+                                    foreach ($cartItems as $item) {
+                                    $totalQuantity += $item['quantity']; // Add quantity of each item
+                                    }
+                                    @endphp
+                                    @if($totalQuantity > 0)
+                                    <span
+                                        class="badge bg-danger rounded-pill position-absolute top-5 start-95 translate-middle p-1">
+                                        {{ $totalQuantity }}
+                                    </span>
+                                    @endif
                                 </a>
                             </li>
 

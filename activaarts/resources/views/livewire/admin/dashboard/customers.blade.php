@@ -128,7 +128,7 @@
                         <div class="mb-3">
                             <label for="role" class="form-label">Role</label>
                             <select id="role" class="form-select" wire:model="roles">
-                                <option value="customer">Customer</option>
+                                <option value="user">Customer</option>
                                 <option value="admin">Admin</option>
                                 <option value="support">Customer Support</option>
                             </select>

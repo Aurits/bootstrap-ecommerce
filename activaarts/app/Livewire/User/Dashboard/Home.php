@@ -4,12 +4,17 @@ namespace App\Livewire\User\Dashboard;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
+use App\Models\Product;
 
 #[Layout('layouts.user')]
 class Home extends Component
 {
     public function render()
     {
-        return view('livewire.user.dashboard.home');
+        $featuredProducts = Product::where('is_featured', 'Yes')
+            ->inRandomOrder()
+            ->limit(6)
+            ->get();
+        return view('livewire.user.dashboard.home', compact('featuredProducts'));
     }
 }

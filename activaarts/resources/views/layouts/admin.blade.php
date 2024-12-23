@@ -16,7 +16,6 @@
 
 <body>
     <div class="dashboard-container">
-
         <nav class="sidebar">
             <div class="sidebar-header">
                 <h3>Activa Arts Admin</h3>
@@ -42,7 +41,7 @@
                         <i class="bi bi-people"></i> Customer Management
                     </a>
                 </li>
-                <li class="{{ request()->routeIs('admin.dashboard.reports') ? 'active' : '' }}">
+                <!-- <li class="{{ request()->routeIs('admin.dashboard.reports') ? 'active' : '' }}">
                     <a href="{{ route('admin.dashboard.reports') }}">
                         <i class="bi bi-graph-up"></i> Reports
                     </a>
@@ -51,7 +50,7 @@
                     <a href="{{ route('admin.dashboard.settings') }}">
                         <i class="bi bi-gear"></i> Settings
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 

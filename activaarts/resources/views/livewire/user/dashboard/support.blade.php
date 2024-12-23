@@ -27,7 +27,7 @@
 
     <div class="container-fluid dashboard-content">
         <div class="row mb-4">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Frequently Asked Questions</h5>
@@ -82,32 +82,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Contact Us</h5>
-                        <form>
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-custom">Send Message</button>
-                        </form>
                     </div>
                 </div>
             </div>
