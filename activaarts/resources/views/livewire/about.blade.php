@@ -5,8 +5,33 @@
             <div class="minimalist-divider"></div>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="https://via.placeholder.com/600x400" alt="About Activa Arts"
-                        class="img-fluid rounded mb-4" />
+                    <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('slider/slider-2.png') }}" class="d-block w-100 rounded"
+                                    alt="About Activa Arts">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <video autoplay loop muted playsinline>
+                                        <source src="{{ asset('slider/slider-1.mp4') }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <p>
@@ -32,6 +57,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- <section class="mb-5">
             <h2 class="text-center mb-4">Our Team</h2>

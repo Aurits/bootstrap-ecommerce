@@ -1,8 +1,8 @@
 // Navbar scroll effect
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -91,7 +91,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         const productId = button.dataset.productId;
         const productName = button.dataset.productName;
         const productPrice = button.dataset.productPrice;
-        
+
         cart.addItem({
             id: productId,
             name: productName,
@@ -102,6 +102,14 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         // Show success message
         const toast = new bootstrap.Toast(document.querySelector('.toast'));
         toast.show();
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var aboutCarousel = new bootstrap.Carousel(document.getElementById('aboutCarousel'), {
+        interval: 5000,
+        wrap: true
     });
 });
 
