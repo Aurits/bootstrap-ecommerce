@@ -9,7 +9,7 @@
                     <div class="user-menu dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <img src="https://via.placeholder.com/40" alt="User" class="rounded-circle">
-                            <span>John Doe</span>
+                            <span>{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
@@ -17,7 +17,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,27 +42,26 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @forelse ($orders as $order)
                                 <tr>
-                                    <td>#1234</td>
-                                    <td>2023-06-15</td>
-                                    <td>$99.99</td>
-                                    <td><span class="badge bg-success">Delivered</span></td>
+                                    <td>#{{ $order->id }}</td>
+                                    <td>{{ $order->created_at->format('Y-m-d') }}</td>
+                                    <td>${{ number_format($order->total, 2) }}</td>
+                                    <td>
+                                        <span class="badge
+                                                @if($order->status === 'Delivered') bg-success
+                                                @elseif($order->status === 'Processing') bg-warning
+                                                @else bg-info @endif">
+                                            {{ $order->status }}
+                                        </span>
+                                    </td>
                                     <td><a href="#" class="btn btn-sm btn-custom">View Details</a></td>
                                 </tr>
+                                @empty
                                 <tr>
-                                    <td>#1235</td>
-                                    <td>2023-06-10</td>
-                                    <td>$149.99</td>
-                                    <td><span class="badge bg-warning">Processing</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-custom">View Details</a></td>
+                                    <td colspan="5" class="text-center">No orders found.</td>
                                 </tr>
-                                <tr>
-                                    <td>#1236</td>
-                                    <td>2023-06-05</td>
-                                    <td>$79.99</td>
-                                    <td><span class="badge bg-info">Shipped</span></td>
-                                    <td><a href="#" class="btn btn-sm btn-custom">View Details</a></td>
-                                </tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

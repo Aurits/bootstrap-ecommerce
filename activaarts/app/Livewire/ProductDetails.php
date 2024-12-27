@@ -44,6 +44,10 @@ class ProductDetails extends Component
 
         Session::put('cart', $cart);
         session()->flash('success', 'Product added to cart successfully!');
+
+        // sleep for 1 second and reload the page
+        sleep(2);
+        return redirect()->route('products.details', ['productId' => $this->productId]);
     }
 
     public function render()

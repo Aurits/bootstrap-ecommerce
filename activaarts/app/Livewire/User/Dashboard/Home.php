@@ -13,7 +13,7 @@ class Home extends Component
     {
         $featuredProducts = Product::where('is_featured', '1')
             ->inRandomOrder()
-            ->limit(4)
+            ->limit(3)
             ->get();
         return view('livewire.user.dashboard.home', compact('featuredProducts'));
     }

@@ -17,6 +17,10 @@
                         <span>Add to Cart</span>
                     </button>
                 </form>
+                <!-- Success Message -->
+                @if (session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
                 <div class="container py-4">
                     <div class="card shadow-sm border-0">
                         <div class="card-body">
