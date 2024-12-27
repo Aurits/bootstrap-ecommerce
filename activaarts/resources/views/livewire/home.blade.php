@@ -14,7 +14,7 @@
 
         <section class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4 fade-in">Featured Products</h2>
+                <h2 class="text-center mb-4 fade-in">Featured</h2>
                 <div class="row g-4 product-grid">
                     @foreach($featuredProducts as $product)
                     <div class="col fade-in">

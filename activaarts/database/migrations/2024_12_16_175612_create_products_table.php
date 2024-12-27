@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('sku')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->string('category');
             $table->decimal('price', 10, 2);
-            $table->integer('stock');
-            $table->text('description');
+            $table->integer('stock')->default(100);
+            $table->text('description')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->string('image')->nullable();
             $table->timestamps();

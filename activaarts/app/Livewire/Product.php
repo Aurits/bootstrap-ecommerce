@@ -51,11 +51,11 @@ class Product extends Component
                 $query->orderBy('created_at', 'desc');
                 break;
             case 'Popular':
-                $query->orderByRaw("CASE WHEN is_featured = 'Yes' THEN 1 ELSE 0 END DESC");
+                $query->orderByRaw("CASE WHEN is_featured = '1' THEN 1 ELSE 0 END DESC");
                 break;
         }
 
-        $products = $query->paginate(9);
+        $products = $query->inRandomOrder()->paginate(9);
 
         return view('livewire.product', compact('products'));
     }

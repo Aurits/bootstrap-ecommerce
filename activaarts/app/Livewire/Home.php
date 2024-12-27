@@ -9,9 +9,9 @@ class Home extends Component
 {
     public function render()
     {
-        $featuredProducts = Product::where('is_featured', 'Yes')
+        $featuredProducts = Product::where('is_featured', '1')
             ->inRandomOrder()
-            ->limit(6)
+            ->limit(4)
             ->get();
         return view('livewire.home', compact('featuredProducts'));
     }

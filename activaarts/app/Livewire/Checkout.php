@@ -2,9 +2,11 @@
 
 namespace App\Livewire;
 
+
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Order;
 
 class Checkout extends Component
 {
@@ -75,6 +77,23 @@ class Checkout extends Component
             'cart_items' => $this->cartItems,
             'total' => $this->total,
         ];
+
+        // Create the order record in the database
+        $order = Order::create([
+            'user_id' => \Illuminate\Support\Facades\Auth::user()->id, // Link to the authenticated user
+            'first_name' => $this->firstName,
+            'last_name' => $this->lastName,
+            'address' => $this->address,
+            'city' => $this->city,
+            'state' => $this->state,
+            'zip' => $this->zip,
+            'cart_items' => $this->cartItems,
+            'subtotal' => $this->subtotal,
+            'shipping' => $this->shipping,
+            'tax' => $this->tax,
+            'total' => $this->total,
+            'cash_on_delivery' => $this->cashOnDelivery,
+        ]);
 
         // Send the order details to the admin (you can replace this with any method to notify the admin)
         $this->sendCheckoutDetails($orderDetails['shipping_information'], [

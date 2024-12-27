@@ -18,7 +18,9 @@
     <div class="dashboard-container">
         <nav class="sidebar">
             <div class="sidebar-header">
-                <h3>Activa Arts Admin</h3>
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    <h2>Activaarts</h2>
+                </a>
             </div>
             <ul class="list-unstyled">
                 <li class="{{ request()->routeIs('admin.dashboard.home') ? 'active' : '' }}">

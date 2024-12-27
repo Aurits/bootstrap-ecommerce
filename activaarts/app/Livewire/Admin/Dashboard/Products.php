@@ -17,7 +17,15 @@ class Products extends Component
     use WithFileUploads;
     use WithPagination;
 
-    public $name, $productId, $sku, $category, $price, $stock, $description, $image, $is_featured = false;
+    // public $name, $productId, $sku, $category, $price, $stock, $description, $image, $is_featured = false;
+    public $name, $productId, $sku, $category, $image, $is_featured = false;
+    public $price = 30;
+    public $stock = 100;
+    public $description = "High-quality canvas perfect for creating stunning artworks. This
+            canvas is designed to bring out the best in your paintings,
+            providing a smooth surface and excellent color absorption.";
+
+
 
     public function store()
     {

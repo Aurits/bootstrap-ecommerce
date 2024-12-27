@@ -135,7 +135,7 @@
                         </div>
                         @if($products)
                         <nav aria-label="Product list pagination">
-                            {{ $products->links() }}
+                            {{ $products->links('pagination::bootstrap-5') }}
                         </nav>
                         @endif
                     </div>
@@ -275,8 +275,8 @@
                         <div class="mb-3">
                             <label for="editProductStatus" class="form-label">Featured?</label>
                             <select class="form-select" id="editProductStatus" wire:model="is_featured" required>
-                                <option value="No">No</option>
-                                <option value="Yes">Yes</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
                             </select>
                             @error('status') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>

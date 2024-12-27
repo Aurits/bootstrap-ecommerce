@@ -19,7 +19,8 @@ class RoleMiddleware
     {
         if (!Auth::check() || Auth::user()->roles !== $role) {
             // Redirect or abort if the user does not have the required role
-            return abort(403, 'Unauthorized');
+            return redirect("/");
+            // return abort(403, 'Unauthorized');
         }
         return $next($request);
     }
