@@ -46,7 +46,7 @@ class About extends Component
         </div>
         <footer style=\"margin-top: 20px; text-align: center; font-size: 14px; color: #888;\">
             <p style=\"margin: 0;\">Thank you for contacting us! We will respond as soon as possible.</p>
-            <p style=\"margin: 0;\">&copy; " . date('Y') . " Activa Arts. All rights reserved.</p>
+            <p style=\"margin: 0;\">&copy; " . date('Y') . " Activaarts. All rights reserved.</p>
         </footer>
     </div>
 ", function ($mail) {

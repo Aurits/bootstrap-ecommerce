@@ -173,13 +173,13 @@
                     <div class="contact-info mt-4">
                         <p><i class="bi bi-geo-alt"></i>Kampala (Uganda)</p>
                         <p><i class="bi bi-envelope"></i>activaartsug@gmail.com</p>
-                        <p><i class="bi bi-telephone"></i>(+256) 773 559 912</p>
+                        <p><i class="bi bi-telephone"></i>(+256) 704416545/773559912</p>
                     </div>
                 </div>
             </div>
             <hr class="footer-divider">
             <div class="footer-bottom text-center">
-                <p class="mb-0">&copy; 2024 Activa Arts. All rights reserved.</p>
+                <p class="mb-0">&copy; 2024 Activaarts. All rights reserved.</p>
             </div>
         </div>
     </footer>

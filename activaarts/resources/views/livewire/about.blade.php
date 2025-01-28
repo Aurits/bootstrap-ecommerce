@@ -1,7 +1,7 @@
 <div>
     <main class="container py-5 mt-5">
         <section class="mb-5">
-            <h1 class="text-center mb-4">About Activa Arts</h1>
+            <h1 class="text-center mb-4">About Activaarts</h1>
             <div class="minimalist-divider"></div>
             <div class="row">
                 <div class="col-md-6">
@@ -9,7 +9,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="{{ asset('slider/slider-2.png') }}" class="d-block w-100 rounded"
-                                    alt="About Activa Arts">
+                                    alt="About Activaarts">
                             </div>
                             <div class="carousel-item">
                                 <div class="ratio ratio-16x9">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-6">
                     <p>
-                        Activa Arts is a premier online destination for art enthusiasts
+                        Activaarts is a premier online destination for art enthusiasts
                         and creators alike. We curate a diverse collection of unique
                         artworks and high-quality craft supplies, connecting talented
                         artists with passionate collectors and DIY enthusiasts.
@@ -44,7 +44,7 @@
                         Our mission is to inspire creativity and bring the joy of art into
                         everyday life. Whether you're looking for a statement piece for
                         your home or office, or seeking the perfect materials for your
-                        next project, Activa Arts is your trusted partner in the world of
+                        next project, Activaarts is your trusted partner in the world of
                         art and crafts.
                     </p>
                     <p>

@@ -1,133 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activa Arts - Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles/custom.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activaarts - Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles/custom.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Activa Arts</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Activaarts</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="container py-5 mt-5">
-        <h1 class="text-center mb-4">Your Cart</h1>
-        <div class="minimalist-divider"></div>
+      <h1 class="text-center mb-4">Your Cart</h1>
+      <div class="minimalist-divider"></div>
 
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="row mb-4">
-                            <div class="col-md-3">
-                                <img src="https://via.placeholder.com/150" alt="Artistic Canvas" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-9">
-                                <h5>Artistic Canvas</h5>
-                                <p class="mb-2">Price: $59.99</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <label for="quantity1" class="me-2">Quantity:</label>
-                                    <input type="number" id="quantity1" class="form-control form-control-sm" style="width: 60px;" value="1" min="1">
-                                </div>
-                                <button class="btn btn-sm btn-outline-danger">Remove</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row mb-4">
-                            <div class="col-md-3">
-                                <img src="https://via.placeholder.com/150" alt="Acrylic Paint Set" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-9">
-                                <h5>Acrylic Paint Set</h5>
-                                <p class="mb-2">Price: $34.99</p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <label for="quantity2" class="me-2">Quantity:</label>
-                                    <input type="number" id="quantity2" class="form-control form-control-sm" style="width: 60px;" value="1" min="1">
-                                </div>
-                                <button class="btn btn-sm btn-outline-danger">Remove</button>
-                            </div>
-                        </div>
-                    </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row mb-4">
+                <div class="col-md-3">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Artistic Canvas"
+                    class="img-fluid rounded"
+                  />
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4">Order Summary</h5>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal</span>
-                            <span>$94.98</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Shipping</span>
-                            <span>$5.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Tax</span>
-                            <span>$9.50</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between mb-4">
-                            <strong>Total</strong>
-                            <strong>$109.48</strong>
-                        </div>
-                        <a href="checkout.html" class="btn btn-custom w-100">Proceed to Checkout</a>
-                    </div>
+                <div class="col-md-9">
+                  <h5>Artistic Canvas</h5>
+                  <p class="mb-2">Price: $59.99</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <label for="quantity1" class="me-2">Quantity:</label>
+                    <input
+                      type="number"
+                      id="quantity1"
+                      class="form-control form-control-sm"
+                      style="width: 60px"
+                      value="1"
+                      min="1"
+                    />
+                  </div>
+                  <button class="btn btn-sm btn-outline-danger">Remove</button>
                 </div>
+              </div>
+              <hr />
+              <div class="row mb-4">
+                <div class="col-md-3">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Acrylic Paint Set"
+                    class="img-fluid rounded"
+                  />
+                </div>
+                <div class="col-md-9">
+                  <h5>Acrylic Paint Set</h5>
+                  <p class="mb-2">Price: $34.99</p>
+                  <div class="d-flex align-items-center mb-2">
+                    <label for="quantity2" class="me-2">Quantity:</label>
+                    <input
+                      type="number"
+                      id="quantity2"
+                      class="form-control form-control-sm"
+                      style="width: 60px"
+                      value="1"
+                      min="1"
+                    />
+                  </div>
+                  <button class="btn btn-sm btn-outline-danger">Remove</button>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-4">Order Summary</h5>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Subtotal</span>
+                <span>$94.98</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Shipping</span>
+                <span>$5.00</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span>Tax</span>
+                <span>$9.50</span>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between mb-4">
+                <strong>Total</strong>
+                <strong>$109.48</strong>
+              </div>
+              <a href="checkout.html" class="btn btn-custom w-100"
+                >Proceed to Checkout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Activa Arts</h5>
-                    <p>Discover unique artworks and craft supplies.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Connect With Us</h5>
-                    <div class="d-flex">
-                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Activaarts</h5>
+            <p>Discover unique artworks and craft supplies.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Connect With Us</h5>
+            <div class="d-flex">
+              <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
             </div>
-            <hr>
-            <p class="text-center mb-0">&copy; 2023 Activa Arts. All rights reserved.</p>
+          </div>
         </div>
+        <hr />
+        <p class="text-center mb-0">
+          &copy; 2023 Activaarts. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
-

@@ -2,7 +2,7 @@
     <main>
         <section class="hero">
             <div class="container text-center">
-                <h1 class="display-4 mb-4 fade-in">Welcome to Activa Arts</h1>
+                <h1 class="display-4 mb-4 fade-in">Welcome to Activaarts</h1>
                 <p class="lead mb-5 fade-in">
                     Discover unique artworks and craft supplies that inspire creativity
                 </p>

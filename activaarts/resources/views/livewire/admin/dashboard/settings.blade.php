@@ -35,7 +35,7 @@
                         <form>
                             <div class="mb-3">
                                 <label for="storeName" class="form-label">Store Name</label>
-                                <input type="text" class="form-control" id="storeName" value="Activa Arts">
+                                <input type="text" class="form-control" id="storeName" value="Activaarts">
                             </div>
                             <div class="mb-3">
                                 <label for="storeDescription" class="form-label">Store Description</label>
