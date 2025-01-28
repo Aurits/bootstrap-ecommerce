@@ -124,7 +124,7 @@
                     <h4>Email</h4>
                     <p>activaartsug@gmail.com</p>
                     <h4>Phone</h4>
-                    <p>(+256) 773 559 912</p>
+                    <p>(+256) 704416545/773559912</p>
                 </div>
             </div>
 
