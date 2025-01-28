@@ -174,7 +174,7 @@
                 </div>
                 <hr class="footer-divider">
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Activaarts. All rights reserved.</p>
+                    <p>&copy; 2025 Activaarts. All rights reserved.</p>
                 </div>
             </div>
         </footer>
