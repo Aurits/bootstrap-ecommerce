@@ -2,27 +2,63 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- ===== DYNAMIC PAGE TITLE ===== -->
+    <!-- Example: For the home page, you might do something like:
+         <title>Activaarts - Unique Artworks &amp; Craft Supplies | Home</title>
+         or pass in a variable from your controller. -->
+    <title>@yield('page_title', 'Activaarts - Unique Artworks & Craft Supplies')</title>
+
+    <!-- ===== META DESCRIPTION ===== -->
+    <!-- Make sure this accurately describes each page’s content. -->
+    <meta name="description"
+        content="Discover unique artworks and craft supplies that inspire creativity and bring art into everyday life. Browse paintings, sculptures, digital art, and more.">
+
+    <!-- ===== KEYWORDS (Optional) ===== -->
+    <!-- Many search engines ignore meta keywords, but you can still include them if you want. -->
+    <meta name="keywords" content="Art, Paintings, Sculptures, Crafts, Handmade, Activaarts">
+
+    <!-- ===== OPEN GRAPH TAGS ===== -->
+    <!-- Helps when your link is shared on social media (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="@yield('og_title', 'Activaarts - Unique Artworks & Craft Supplies')" />
+    <meta property="og:description" content="Discover unique artworks and craft supplies that inspire creativity and bring art into everyday life." />
+    <!-- Use a relevant image for your social sharing preview -->
+    <meta property="og:image" content="{{ asset('logo.png') }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- ===== TWITTER CARD TAGS ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', 'Activaarts - Unique Artworks & Craft Supplies')">
+    <meta name="twitter:description" content="Discover unique artworks and craft supplies that inspire creativity and bring art into everyday life.">
+    <meta name="twitter:image" content="{{ asset('logo.png') }}">
+
+    <!-- Bootstrap & Icons & Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('styles/custom.css') }}">
+
+    <!-- Google Fonts or Bunny Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet">
+
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" oncontextmenu="return false;">
     <div class="min-h-screen">
+        <!-- ============= HEADER / NAVBAR ============= -->
         <header>
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
                         <img src="{{ asset('logo.png') }}" alt="Activa Arts Logo" class="navbar-logo me-2">
-
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <i class="bi bi-list"></i>
@@ -51,7 +87,6 @@
                                 <a class="nav-link hover-effect" href="{{ route('cart') }}">
                                     <i class="bi bi-cart"></i>
                                     <span>Cart</span>
-
                                 </a>
                             </li>
                             @auth
@@ -64,24 +99,32 @@
                                 <ul class="dropdown-menu dropdown-menu-end animate slideIn"
                                     aria-labelledby="userDropdown">
                                     @if(auth()->user()->roles == 'admin')
-                                    <li><a class="dropdown-item" href="{{ route('admin.dashboard.home') }}">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard.home') }}">
                                             <i class="bi bi-speedometer2 me-2"></i>Dashboard
-                                        </a></li>
+                                        </a>
+                                    </li>
                                     @else
-                                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('dashboard') }}">
                                             <i class="bi bi-grid me-2"></i>Dashboard
-                                        </a></li>
+                                        </a>
+                                    </li>
                                     @endif
-                                    <li><a class="dropdown-item" href="{{ route('profile') }}">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('profile') }}">
                                             <i class="bi bi-person me-2"></i>Profile
-                                        </a></li>
+                                        </a>
+                                    </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item text-danger" href="{{ route('logout') }}"
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="bi bi-box-arrow-right me-2"></i>Logout
-                                        </a></li>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             @else
@@ -97,11 +140,14 @@
                 </div>
             </nav>
         </header>
+        <!-- ============= /HEADER/NAVBAR ============= -->
 
         <main>
+            <!-- Main Content Here -->
             {{ $slot }}
         </main>
 
+        <!-- ============= FOOTER ============= -->
         <footer class="footer-section">
             <div class="container">
                 <div class="row g-4">
@@ -109,8 +155,9 @@
                         <div class="footer-brand">
                             <img src="{{ asset('logo.png') }}" alt="Activa Arts Logo" class="footer-logo mb-3">
                         </div>
-                        <p class="footer-description">Discover unique artworks and craft supplies that inspire
-                            creativity and bring art into everyday life.</p>
+                        <p class="footer-description">
+                            Discover unique artworks and craft supplies that inspire creativity and bring art into everyday life.
+                        </p>
                         <div class="newsletter-form">
                             <h6 class="newsletter-title">Stay Updated</h6>
                             <form class="d-flex gap-2">
@@ -127,8 +174,7 @@
                             <li><a href="{{ route('home') }}"><i class="bi bi-chevron-right"></i>Home</a></li>
                             <li><a href="{{ route('products') }}"><i class="bi bi-chevron-right"></i>Products</a></li>
                             <li><a href="{{ route('about') }}"><i class="bi bi-chevron-right"></i>About Us</a></li>
-                            <li><a href="{{ route('about') }}#contact"><i class="bi bi-chevron-right"></i>Contact</a>
-                            </li>
+                            <li><a href="{{ route('about') }}#contact"><i class="bi bi-chevron-right"></i>Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-4">
@@ -178,6 +224,7 @@
                 </div>
             </div>
         </footer>
+        <!-- ============= /FOOTER ============= -->
     </div>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -194,6 +241,8 @@
     </div>
 
     @livewireScripts
+
+    <!-- JS Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('scripts/main.js') }}"></script>
     @stack('scripts')
